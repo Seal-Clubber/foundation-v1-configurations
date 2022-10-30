@@ -1,10 +1,10 @@
 /*
  *
- * Example (Litecoin Cash)
+ * Example (Evrmore)
  *
  */
 
-// Litecoin Cash Configuration File
+// Firocoin Configuration File
 // https://blinkhash.com/docs/foundation/configurations
 // Consult the above link if you have any questions
 
@@ -14,8 +14,8 @@
 // Miscellaneous Configuration
 const config = {};
 config.enabled = true;
-config.name = 'Pool-LitecoinCash';
-config.coins = ['Litecoin Cash'];
+config.name = 'Pool-Evrmore';
+config.coins = ['Evrmore'];
 
 // Banning Configuration
 config.banning = {};
@@ -45,7 +45,7 @@ config.ports.push(ports1);
 config.p2p = {};
 config.p2p.enabled = false;
 config.p2p.host = '[host]';
-config.p2p.port = 62458;
+config.p2p.port = 8820;
 
 // Statistics Configuration
 config.statistics = {};
@@ -73,56 +73,66 @@ config.primary.address = '[address]';
 
 // Coin Configuration
 config.primary.coin = {};
-config.primary.coin.name = 'Litecoin Cash';
-config.primary.coin.symbol = 'LCC';
-config.primary.coin.asicBoost = false;
+config.primary.coin.name = 'Evrmore';
+config.primary.coin.symbol = 'EVR';
+config.primary.coin.asicboost = false;
 config.primary.coin.getinfo = false;
 config.primary.coin.hybrid = false;
 config.primary.coin.parameters = {};
-config.primary.coin.segwit = true;
+config.primary.coin.segwit = false;
 config.primary.coin.version = 1;
 
 // Algorithm Configuration
 config.primary.coin.algorithms = {};
-config.primary.coin.algorithms.mining = 'minotaurx';
+config.primary.coin.algorithms.mining = 'evrprogpow';
 config.primary.coin.algorithms.block = 'sha256d';
 config.primary.coin.algorithms.coinbase = 'sha256d';
 
 // Rewards Configuration
 config.primary.coin.rewards = {};
-config.primary.coin.rewards.type = '';
+config.primary.coin.rewards.type = 'evrmore';
 config.primary.coin.rewards.addresses = [];
+
+// Address Configuration
+const address1 = {};
+address1.address = "e3Rvyh7CJDnVL29PWFoEaWoLd2y529t9mA";
+// Dev fund addresses can be found within the GetBlockTemplate function in the node
+//"e3Rvyh7CJDnVL29PWFoEaWoLd2y529t9mA"
+//"e4gGKBh6mTGEZk9WpdUzLzo4E8GkEdXswu"
+//"e96CPNE16va8NZynPBCM3heGCkQur6kS4t"
+//"ESDwJs2FX5zYoVnLQ7YuLZhmnsAcpKqMiq"
+config.primary.coin.rewards.addresses.push(address1);
 
 // Mainnet Configuration
 config.primary.coin.mainnet = {};
-config.primary.coin.mainnet.bech32 = 'lcc';
+config.primary.coin.mainnet.bech32 = '';
 config.primary.coin.mainnet.bip32 = {};
 config.primary.coin.mainnet.bip32.public = Buffer.from('0488B21E', 'hex').readUInt32LE(0);
 config.primary.coin.mainnet.bip32.private = Buffer.from('0488ADE4', 'hex').readUInt32LE(0);
-config.primary.coin.mainnet.peerMagic = 'c7e4baf8';
-config.primary.coin.mainnet.pubKeyHash = Buffer.from('1C', 'hex').readUInt8(0);
-config.primary.coin.mainnet.scriptHash = Buffer.from('32', 'hex').readUInt8(0);
-config.primary.coin.mainnet.wif = Buffer.from('B0', 'hex').readUInt8(0);
-config.primary.coin.mainnet.coin = 'lcc';
+config.primary.coin.mainnet.peerMagic = '4556524D';
+config.primary.coin.mainnet.pubKeyHash = Buffer.from('21', 'hex').readUInt8(0);
+config.primary.coin.mainnet.scriptHash = Buffer.from('5C', 'hex').readUInt8(0);
+config.primary.coin.mainnet.wif = Buffer.from('80', 'hex').readUInt8(0);
+config.primary.coin.mainnet.coin = 'evr';
 
 // Testnet Configuration
 config.primary.coin.testnet = {};
-config.primary.coin.testnet.bech32 = 'tlcc';
+config.primary.coin.testnet.bech32 = '';
 config.primary.coin.testnet.bip32 = {};
 config.primary.coin.testnet.bip32.public = Buffer.from('043587CF', 'hex').readUInt32LE(0);
 config.primary.coin.testnet.bip32.private = Buffer.from('04358394', 'hex').readUInt32LE(0);
-config.primary.coin.testnet.peerMagic = 'b6f5d3cf';
-config.primary.coin.testnet.pubKeyHash = Buffer.from('7F', 'hex').readUInt8(0);
-config.primary.coin.testnet.scriptHash = Buffer.from('3A', 'hex').readUInt8(0);
+config.primary.coin.testnet.peerMagic = '45565254';
+config.primary.coin.testnet.pubKeyHash = Buffer.from('6F', 'hex').readUInt8(0);
+config.primary.coin.testnet.scriptHash = Buffer.from('C4', 'hex').readUInt8(0);
 config.primary.coin.testnet.wif = Buffer.from('EF', 'hex').readUInt8(0);
-config.primary.coin.testnet.coin = 'lcc';
+config.primary.coin.testnet.coin = 'tevr';
 
 // Daemon Configuration
 config.primary.daemons = [];
 
 const daemons1 = {};
 daemons1.host = '[host]';
-daemons1.port = 62457;
+daemons1.port = 8819;
 daemons1.username = '[username]';
 daemons1.password = '[password]';
 config.primary.daemons.push(daemons1);
@@ -137,7 +147,7 @@ config.primary.payments.minPayment = 0.005;
 config.primary.payments.transactionFee = 0.04;
 config.primary.payments.daemon = {};
 config.primary.payments.daemon.host = '[host]';
-config.primary.payments.daemon.port = 62457;
+config.primary.payments.daemon.port = 8819;
 config.primary.payments.daemon.username = '[username]';
 config.primary.payments.daemon.password = '[password]';
 
@@ -151,3 +161,4 @@ config.primary.recipients.push(recipient1);
 
 // Export Configuration
 module.exports = config;
+

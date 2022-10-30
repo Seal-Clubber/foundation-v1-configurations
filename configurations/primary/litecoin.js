@@ -147,7 +147,7 @@ config.primary.recipients = [];
 
 const recipient1 = {};
 recipient1.address = '[address]';
-recipient1.percentage = [percentage] // 0 to 1;
+recipient1.percentage = [percentage]; // 0 to 1;
 config.primary.recipients.push(recipient1);
 
 // Export Configuration
