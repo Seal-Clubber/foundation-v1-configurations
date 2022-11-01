@@ -95,12 +95,10 @@ config.primary.coin.rewards.addresses = [];
 
 // Address Configuration
 const address1 = {};
-address1.address = "e3Rvyh7CJDnVL29PWFoEaWoLd2y529t9mA";
-// Dev fund addresses can be found within the GetBlockTemplate function in the node
-//"e3Rvyh7CJDnVL29PWFoEaWoLd2y529t9mA"
-//"e4gGKBh6mTGEZk9WpdUzLzo4E8GkEdXswu"
-//"e96CPNE16va8NZynPBCM3heGCkQur6kS4t"
-//"ESDwJs2FX5zYoVnLQ7YuLZhmnsAcpKqMiq"
+address1.address = "eHNUGzw8ZG9PGC8gKtnneyMaQXQTtAUm98";
+// Examples may be out of date, Dev fund addresses can be found within the GetBlockTemplate function in the node
+//"eHNUGzw8ZG9PGC8gKtnneyMaQXQTtAUm98"
+//"e7Tkk3kjS9NjSYVX2Q8qzxXB1WKMRvea1j"
 config.primary.coin.rewards.addresses.push(address1);
 
 // Mainnet Configuration
@@ -113,7 +111,7 @@ config.primary.coin.mainnet.peerMagic = '4556524D';
 config.primary.coin.mainnet.pubKeyHash = Buffer.from('21', 'hex').readUInt8(0);
 config.primary.coin.mainnet.scriptHash = Buffer.from('5C', 'hex').readUInt8(0);
 config.primary.coin.mainnet.wif = Buffer.from('80', 'hex').readUInt8(0);
-config.primary.coin.mainnet.coin = 'evr';
+config.primary.coin.mainnet.coin = 'evrm';
 
 // Testnet Configuration
 config.primary.coin.testnet = {};
@@ -125,7 +123,7 @@ config.primary.coin.testnet.peerMagic = '45565254';
 config.primary.coin.testnet.pubKeyHash = Buffer.from('6F', 'hex').readUInt8(0);
 config.primary.coin.testnet.scriptHash = Buffer.from('C4', 'hex').readUInt8(0);
 config.primary.coin.testnet.wif = Buffer.from('EF', 'hex').readUInt8(0);
-config.primary.coin.testnet.coin = 'tevr';
+config.primary.coin.testnet.coin = 'evrt';
 
 // Daemon Configuration
 config.primary.daemons = [];
@@ -143,7 +141,7 @@ config.primary.payments.enabled = true;
 config.primary.payments.checkInterval = 20; // s;
 config.primary.payments.paymentInterval = 7200; // s;
 config.primary.payments.minConfirmations = 10;
-config.primary.payments.minPayment = 0.005;
+config.primary.payments.minPayment = 10;
 config.primary.payments.transactionFee = 0.04;
 config.primary.payments.daemon = {};
 config.primary.payments.daemon.host = '[host]';
