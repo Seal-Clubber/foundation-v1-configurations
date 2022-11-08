@@ -91,15 +91,7 @@ config.primary.coin.algorithms.coinbase = 'sha256d';
 // Rewards Configuration
 config.primary.coin.rewards = {};
 config.primary.coin.rewards.type = 'evrmore';
-config.primary.coin.rewards.addresses = [];
-
-// Address Configuration
-const address1 = {};
-address1.address = "eHNUGzw8ZG9PGC8gKtnneyMaQXQTtAUm98";
-// Examples may be out of date, Dev fund addresses can be found within the GetBlockTemplate function in the node
-//"eHNUGzw8ZG9PGC8gKtnneyMaQXQTtAUm98"
-//"e7Tkk3kjS9NjSYVX2Q8qzxXB1WKMRvea1j"
-config.primary.coin.rewards.addresses.push(address1);
+config.primary.coin.rewards.minerdevfund = 0; // Int for selecting GetBlockTemplate minerdevfund address array;
 
 // Mainnet Configuration
 config.primary.coin.mainnet = {};
